@@ -1,0 +1,29 @@
+.cuadro{
+    width: 60%;
+    margin-left: auto;
+
+}
+::placeholder{
+    font-size: 12px;
+}
+.error{
+    border-color: red;
+}
+body{
+    background-color: #F8F9FA;
+}
+img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer p {
+    margin-bottom: .25rem;
+  }
+  main {
+    min-height: calc(100vh - 210px);
+  }
+  .container{
+    margin-bottom: 5%;
+  }
+    
