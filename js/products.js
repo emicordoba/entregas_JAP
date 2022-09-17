@@ -1,7 +1,10 @@
 const obtenerDatos = localStorage.getItem('catID');
 const guardarDatos = `https://japceibal.github.io/emercado-api/cats_products/${obtenerDatos}.json`;
+
+
 let minCost = undefined;
 let maxCost = undefined;
+
 
 const obtenerProductos = async () => {
   try {
@@ -14,6 +17,7 @@ const obtenerProductos = async () => {
   }
 };
 
+
 // Función que obtiene del JSON el nombre de la categoría seleccionada
 
 async function obtenerNombre(){
@@ -23,6 +27,17 @@ async function obtenerNombre(){
 }
 
 obtenerProductos();
+
+
+
+
+
+async function mostrarProducto (id){
+  const obtenerProducto = localStorage.setItem('product',id);
+  location.href = 'product-info.html';
+}
+
+
 
 async function showProductsList(array) {
   let listadoAutos = "";
@@ -34,7 +49,7 @@ async function showProductsList(array) {
 
     listadoAutos += ` 
 <div onclick="setCatID(${lista[i].id})" class="list-group-item list-group-item-action cursor-active">
-<div class="row">
+<div class="row" onclick = "mostrarProducto(${array[i].id})">
     <div class="col-3">
         <img src="${lista[i].image}" alt="${lista[i].description}" class="img-thumbnail">
     </div>
