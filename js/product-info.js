@@ -15,7 +15,21 @@ async function peticionProducto(enlace) {
   }
 }
 
-// Funcion para reorrer las imagenes 
+
+//Funcion que realiza una peticion, para odbtener los prodcutos relacionados de un producto en particular
+
+async function obtenerProductoRelacionado(){
+
+  const petProd = await fetch(urlProduct);
+  const respuestaProduct = await petProd.json();
+
+  return respuestaProduct.relatedProducts;
+  
+}
+
+
+
+// Funcion para recorrer las imagenes 
 
 
  function recorrerImagenes(imagenes){
@@ -103,6 +117,39 @@ document.getElementById('insertProduct').innerHTML += infoProducto;
 
 }
 
+// Funcion que muestre el producto relacionado
+
+
+function showRelatedProducts (prodRel){
+   
+  let infoRelatedProducts = "";
+  let listado = prodRel;
+
+  for (let i = 0; i < listado.length; i++){
+    infoRelatedProducts += `
+    <div class="row d-flex " onclick = "mostrarProductoRel(${prodRel[i].id})">
+    <div> <img src="${listado[i].image}" class="col-2"> </div>
+    <div> <h5 class="mt-3">${listado[i].name}</h5> </div>
+    </div>
+    `
+  }
+
+
+  document.getElementById('prodRelacionado').innerHTML += infoRelatedProducts;
+
+
+}
+
+// Funcion que se ejecuta al hacer click en un producto relacionado
+
+async function mostrarProductoRel (id){
+  const obtenerProducto = localStorage.setItem('product',id);
+  location.reload();
+}
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', async ()=>{
 
@@ -111,5 +158,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 
   let commentObtenido = await peticionProducto(urlComentario);
   mostrarComentarios(commentObtenido);
-
+  
+  let arrayRelProd = await obtenerProductoRelacionado();
+  showRelatedProducts(arrayRelProd);
 })

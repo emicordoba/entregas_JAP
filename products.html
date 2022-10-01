@@ -43,7 +43,16 @@
               <a class="nav-link" href="sell.html">Vender</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"><span id="usuario"></span></a>
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color:rgba(255,255,255,.55)">
+                  <span id="usuario"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="./cart.html">Mi carrito</a></li>
+                  <li><a class="dropdown-item" href="./my-profile.html">Mi perfil</a></li>
+                  <li><a class="dropdown-item" href="./index.html">Cerrar sesión</a></li>
+                </ul>
+              </div>`
             </li>
           </ul>
         </div>
