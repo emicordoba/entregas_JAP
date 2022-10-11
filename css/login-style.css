@@ -26,4 +26,6 @@ footer p {
   .container{
     margin-bottom: 5%;
   }
-    
+    footer{
+        background-color: black;
+    }
