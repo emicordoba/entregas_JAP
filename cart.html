@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
+  <title>Carrito de compras</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -47,9 +47,46 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+      <br>
+      <h1 class="text-center mt-2 pb-20">Carrito de compras</h1>
+      <section class="vh-95" id="carritoUser">
+      </section>
+      <br>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0"><strong>Tipo de envío</strong></legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Premium 2 a 5 días (15%)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Express 5 a 8 días (7%)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Standard 12 a 15 días (5%)
+            </label>
+          </div>
+       </fieldset>
+       <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Calle</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Número</label>
+          <input type="number" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Esquina</label>
+          <input type="text" class="form-control" id="inputAddress">
+        </div>
     </div>
   </main>
   <footer class="text-muted">
