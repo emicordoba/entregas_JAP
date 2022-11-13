@@ -46,3 +46,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('usuario').innerHTML = usuario;
 
 })
+
+let cerrar = document.getElementById("cerrarSesion");
+
+cerrar.addEventListener('click',()=>{
+  localStorage.clear();
+
+})
